@@ -1,6 +1,6 @@
 package org.lessons.java.security;
 
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class PasswordGenerator {

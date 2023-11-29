@@ -1,5 +1,6 @@
 package org.lessons.java.security;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class PasswordGenerator {
@@ -25,11 +26,17 @@ public class PasswordGenerator {
         System.out.println("Inserisci il tuo giorno di nascita: ");
         dayOfBirth = inputUser.nextInt();
 
-        System.out.println("Inserisci il tuo mese di nascita: ");
+        System.out.println("Inserisci il tuo mese di nascita sottoforma di numero: ");
         monthOfBirth = inputUser.nextInt();
 
         System.out.println("Inserisci il tuo anno di nascita: ");
         yearOfBirth = inputUser.nextInt();
+
+        int sumDateOfBirth = dayOfBirth + monthOfBirth + yearOfBirth;
+        System.out.println(sumDateOfBirth);
+
+        String generatePassword = name + "-" + lastname + "-" + favouriteColor + "-" + sumDateOfBirth;
+        System.out.println(generatePassword);
 
         inputUser.close();
     }
